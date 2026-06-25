@@ -170,6 +170,18 @@
     margin: 0 0 10px;
   }
 
+ /* ELEVATION PROFILE */
+  .elev-block { margin-bottom: 18px; }
+  .elev-block:last-child { margin-bottom: 0; }
+  .elev-head {
+    display: flex; align-items: baseline; gap: 8px;
+    margin-bottom: 6px; flex-wrap: wrap;
+  }
+  .elev-day { font-size: 13px; font-weight: 600; color: #1a1a18; }
+  .elev-meta { font-size: 12px; color: #888; }
+  .elev-svg { width: 100%; height: auto; display: block; }
+  .elev-svg text { font-family: 'Inter', sans-serif; }
+
   @media (max-width: 500px) {
     .gear-grid { grid-template-columns: 1fr; }
     .hero-wrap { height: 180px; }
@@ -362,6 +374,101 @@
 
   <hr>
 
+  <!-- SZINTPROFIL -->
+  <p class="section-title">Szintprofil</p>
+  <div class="section-card">
+
+    <!-- NAP 1 PROFIL -->
+    <div class="elev-block">
+      <div class="elev-head">
+        <span class="elev-day">1. nap</span>
+        <span class="elev-meta">Velem → Írott-kő → Kőszeg · ~19 km · +518 / –850 m</span>
+      </div>
+      <svg class="elev-svg" viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="1. nap szintprofil">
+        <defs>
+          <linearGradient id="fill1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1D9E75" stop-opacity="0.32"/>
+            <stop offset="100%" stop-color="#1D9E75" stop-opacity="0.04"/>
+          </linearGradient>
+        </defs>
+        <!-- gridlines + y labels -->
+        <g stroke="rgba(0,0,0,0.07)" stroke-width="1">
+          <line x1="44" y1="28" x2="748" y2="28"/>
+          <line x1="44" y1="95" x2="748" y2="95"/>
+          <line x1="44" y1="162" x2="748" y2="162"/>
+          <line x1="44" y1="190" x2="748" y2="190"/>
+        </g>
+        <g fill="#aaa" font-size="9" text-anchor="end">
+          <text x="40" y="31">900 m</text>
+          <text x="40" y="98">630 m</text>
+          <text x="40" y="165">360 m</text>
+          <text x="40" y="193">220 m</text>
+        </g>
+        <!-- area + line -->
+        <path d="M44,161 L137,97 L229,28 L563,92 L655,95 L748,178 L748,190 L44,190 Z" fill="url(#fill1)"/>
+        <path d="M44,161 L137,97 L229,28 L563,92 L655,95 L748,178" fill="none" stroke="#1D9E75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <!-- points -->
+        <g>
+          <circle cx="44"  cy="161" r="4" fill="#fff" stroke="#3a8fd4" stroke-width="2.5"/>
+          <circle cx="229" cy="28"  r="4.5" fill="#fff" stroke="#c07a1a" stroke-width="2.5"/>
+          <circle cx="563" cy="92"  r="4" fill="#fff" stroke="#1D9E75" stroke-width="2.5"/>
+          <circle cx="655" cy="95"  r="4" fill="#fff" stroke="#1D9E75" stroke-width="2.5"/>
+          <circle cx="748" cy="178" r="4" fill="#fff" stroke="#c85428" stroke-width="2.5"/>
+        </g>
+        <!-- labels -->
+        <g font-size="10" fill="#555" text-anchor="middle">
+          <text x="50"  y="207" text-anchor="start">Velem<tspan fill="#999"> 340 m</tspan></text>
+          <text x="229" y="18" font-weight="600" fill="#1a1a18">Írott-kő 884 m</text>
+          <text x="563" y="84">Hét-forrás</text>
+          <text x="655" y="87">Óház-tető</text>
+          <text x="744" y="207" text-anchor="end">Kőszeg <tspan fill="#999">270 m</tspan></text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- NAP 2 PROFIL -->
+    <div class="elev-block">
+      <div class="elev-head">
+        <span class="elev-day">2. nap</span>
+        <span class="elev-meta">Kőszeg → Tömörd · 15,8 km · +130 / –180 m · szinte sík</span>
+      </div>
+      <svg class="elev-svg" viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="2. nap szintprofil">
+        <defs>
+          <linearGradient id="fill2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3a8fd4" stop-opacity="0.28"/>
+            <stop offset="100%" stop-color="#3a8fd4" stop-opacity="0.04"/>
+          </linearGradient>
+        </defs>
+        <g stroke="rgba(0,0,0,0.07)" stroke-width="1">
+          <line x1="44" y1="28" x2="748" y2="28"/>
+          <line x1="44" y1="95" x2="748" y2="95"/>
+          <line x1="44" y1="162" x2="748" y2="162"/>
+          <line x1="44" y1="190" x2="748" y2="190"/>
+        </g>
+        <g fill="#aaa" font-size="9" text-anchor="end">
+          <text x="40" y="31">900 m</text>
+          <text x="40" y="98">630 m</text>
+          <text x="40" y="165">360 m</text>
+          <text x="40" y="193">220 m</text>
+        </g>
+        <path d="M44,178 L222,170 L400,173 L572,180 L748,186 L748,190 L44,190 Z" fill="url(#fill2)"/>
+        <path d="M44,178 L222,170 L400,173 L572,180 L748,186" fill="none" stroke="#3a8fd4" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <g>
+          <circle cx="44"  cy="178" r="4" fill="#fff" stroke="#3a8fd4" stroke-width="2.5"/>
+          <circle cx="400" cy="173" r="4" fill="#fff" stroke="#3a8fd4" stroke-width="2.5"/>
+          <circle cx="748" cy="186" r="4" fill="#fff" stroke="#1D9E75" stroke-width="2.5"/>
+        </g>
+        <g font-size="10" fill="#555">
+          <text x="50"  y="207" text-anchor="start">Kőszeg<tspan fill="#999"> 270 m</tspan></text>
+          <text x="400" y="165" text-anchor="middle">Grádics-forrás</text>
+          <text x="744" y="207" text-anchor="end">Tömörd <tspan fill="#999">235 m</tspan></text>
+        </g>
+      </svg>
+    </div>
+
+  </div>
+
+  <hr>
   <!-- FELSZERELES -->
   <p class="section-title">Felszerelés – október-specifikus</p>
   <div class="section-card">
