@@ -1,0 +1,267 @@
+
+<style>
+.day-header{display:flex;align-items:center;gap:10px;margin:1.5rem 0 0.75rem}
+.day-badge{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:4px 12px;font-size:13px;font-weight:500;color:var(--color-text-secondary);white-space:nowrap}
+.day-title{font-size:17px;font-weight:500;color:var(--color-text-primary)}
+.timeline{position:relative;padding-left:28px;margin-bottom:0.5rem}
+.timeline::before{content:'';position:absolute;left:9px;top:6px;bottom:6px;width:1px;background:var(--color-border-tertiary)}
+.step{position:relative;margin-bottom:14px}
+.step-dot{position:absolute;left:-23px;top:4px;width:10px;height:10px;border-radius:50%;border:2px solid var(--color-border-secondary);background:var(--color-background-primary)}
+.step-dot.blue{border-color:#378ADD;background:#E6F1FB}
+.step-dot.teal{border-color:#1D9E75;background:#E1F5EE}
+.step-dot.amber{border-color:#BA7517;background:#FAEEDA}
+.step-dot.gray{border-color:#888780;background:var(--color-background-secondary)}
+.step-dot.coral{border-color:#D85A30;background:#FAECE7}
+.step-time{font-size:12px;color:var(--color-text-secondary);margin-bottom:2px}
+.step-main{font-size:14px;color:var(--color-text-primary);line-height:1.5}
+.step-sub{font-size:13px;color:var(--color-text-secondary);margin-top:2px;line-height:1.5}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:1.25rem 0}
+.info-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px}
+.info-label{font-size:11px;color:var(--color-text-secondary);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em}
+.info-value{font-size:14px;font-weight:500;color:var(--color-text-primary)}
+.section-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin-bottom:1rem}
+.divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:1.25rem 0}
+.gear-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gear-item{font-size:13px;color:var(--color-text-primary);display:flex;align-items:flex-start;gap:6px;padding:4px 0}
+.gear-item i{color:var(--color-text-secondary);font-size:15px;margin-top:1px;flex-shrink:0}
+.warn-box{background:#FAEEDA;border-left:3px solid #BA7517;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:8px 12px;margin:10px 0;font-size:13px;color:#633806}
+.tip-box{background:#E1F5EE;border-left:3px solid #1D9E75;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:8px 12px;margin:10px 0;font-size:13px;color:#085041}
+.info-box{background:#E6F1FB;border-left:3px solid #378ADD;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:8px 12px;margin:10px 0;font-size:13px;color:#0C447C}
+.contacts{display:flex;flex-direction:column;gap:6px}
+.contact-row{font-size:13px;color:var(--color-text-primary)}
+.hero-wrap{position:relative;border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:1.25rem;height:210px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#3C3489 0%,#1D9E75 100%)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.1) 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px 18px}
+.hero-title{color:#fff;font-size:20px;font-weight:500;margin:0;line-height:1.2}
+.hero-sub{color:rgba(255,255,255,0.82);font-size:13px;margin:4px 0 0}
+.date-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.18);border:0.5px solid rgba(255,255,255,0.4);border-radius:99px;padding:4px 10px;font-size:12px;color:#fff;margin-bottom:8px}
+</style>
+
+<div style="padding:0.25rem 0 1.5rem">
+
+<div class="hero-wrap">
+  <div class="hero-bg"></div>
+  <img class="hero-img" src="https://img2.oastatic.com/img2/44427918/max/variant.jpg" alt="Írott-kő kilátó Kőszegi-hegység őszi erdő">
+  <div class="hero-overlay">
+    <div class="date-pill"><i class="ti ti-calendar" aria-hidden="true"></i> 2026. október 16–18.</div>
+    <div class="hero-title">Kéktúra – Írott-kő indítás</div>
+    <div class="hero-sub">Budapest (autó) → Kőszeg → Tömörd → Budapest · Őszi túra</div>
+  </div>
+</div>
+
+<div class="info-grid">
+  <div class="info-card">
+    <div class="info-label">0. nap (péntek est.)</div>
+    <div class="info-value">Okt. 16. → Kőszeg</div>
+  </div>
+  <div class="info-card">
+    <div class="info-label">1. nap (szombat)</div>
+    <div class="info-value">Okt. 17. · ~14 km</div>
+  </div>
+  <div class="info-card">
+    <div class="info-label">2. nap (vasárnap)</div>
+    <div class="info-value">Okt. 18. · ~15,8 km</div>
+  </div>
+  <div class="info-card">
+    <div class="info-label">Napfény (okt. 17–18.)</div>
+    <div class="info-value">~10 óra/nap</div>
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>Október 17–18. napkelte / napnyugta Kőszeg:</strong> napkelte ~07:35, napnyugta ~17:40 — összesen ~10 óra fény. Az 1. nap (Írott-kő) hosszú és nehéz; <strong>legkésőbb 08:00-ra el kell indulni Velemből!</strong> Gyönyörű őszi lombszínek várhatók a Kőszegi-hegységben.
+</div>
+
+<hr class="divider">
+
+<div class="day-header">
+  <span class="day-badge">0. nap – péntek, okt. 16.</span>
+  <span class="day-title">Budapest → Kőszeg (autóval)</span>
+</div>
+
+<div class="section-card">
+  <div class="timeline">
+    <div class="step">
+      <div class="step-dot blue"></div>
+      <div class="step-time">17:00–18:00 (munka után)</div>
+      <div class="step-main">Budapest → Kőszeg: M1 autópálya Győrig, majd 84-es út</div>
+      <div class="step-sub">~230 km · ~2,5 óra. Pénteken este forgalom sűrűbb Budapestnél — számíts +20–30 percre. Parkolás: Liszt Ferenc u. (buszállomás mellett, ingyenes).</div>
+    </div>
+    <div class="step">
+      <div class="step-dot amber"></div>
+      <div class="step-time">20:00–20:30 körül</div>
+      <div class="step-main">Bejelentkezés a szállásra, vacsora</div>
+      <div class="step-sub">Kék Huszár Vendéglő (Fő tér) — ha még nyitva. Alternatíva: Arany Strucc, Rajnis Borterasz. Korán lefekvés!</div>
+    </div>
+    <div class="step">
+      <div class="step-dot coral"></div>
+      <div class="step-time">Este — fontos!</div>
+      <div class="step-main">Taxist foglalj le még ma estére (holnap reggeli + vasárnapi fuvarra)</div>
+      <div class="step-sub">Gróf József: +36 30 937 7336 — pénteken este egyeztesd a szombat reggeli Velem-fuvart ÉS a vasárnap Tömörd→Kőszeg fuvart egyszerre.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="day-header">
+  <span class="day-badge">1. nap – szombat, okt. 17.</span>
+  <span class="day-title">Írott-kő → Hét-forrás → Kőszeg</span>
+</div>
+
+<div class="info-grid">
+  <div class="info-card"><div class="info-label">Táv</div><div class="info-value">~14 km + feljutás</div></div>
+  <div class="info-card"><div class="info-label">Szint</div><div class="info-value">+518 / –850 m</div></div>
+  <div class="info-card"><div class="info-label">Pecsét</div><div class="info-value">3 db (OKT 1–3)</div></div>
+  <div class="info-card"><div class="info-label">Menetidő</div><div class="info-value">~7–9 óra</div></div>
+</div>
+
+<div class="warn-box"><i class="ti ti-sunset-2" aria-hidden="true"></i> <strong>Napnyugta 17:40!</strong> Kőszegre való leérkezést 17:00 előtt kell teljesíteni — sötétedésben a meredek ereszkedés veszélyes. Fejlámpa legyen kéznél!</div>
+
+<div class="section-card">
+  <div class="timeline">
+    <div class="step">
+      <div class="step-dot amber"></div>
+      <div class="step-time">06:45</div>
+      <div class="step-main">Ébresztő, gyors reggeli</div>
+      <div class="step-sub">Szendvicseket este készítsd el! Minden perccel korábban indulsz, annál kényelmesebb a nap.</div>
+    </div>
+    <div class="step">
+      <div class="step-dot coral"></div>
+      <div class="step-time">07:30</div>
+      <div class="step-main">Kőszeg → Velem: taxi (előre lefoglalt)</div>
+      <div class="step-sub">~10 perc, ~2.500–3.500 Ft. Az autó a kőszegi parkolóban marad.</div>
+    </div>
+    <div class="step">
+      <div class="step-dot blue"></div>
+      <div class="step-time">07:45–08:00</div>
+      <div class="step-main">Velem: feljutás Írott-kőre (P jelzés, ~5 km, 518 m+)</div>
+      <div class="step-sub">Október közepén a csúcsnál 2–8 °C, szeles, köd is lehetséges. Induláskor több réteg, menet közben le lehet venni.</div>
+    </div>
+    <div class="step">
+      <div class="step-dot teal"></div>
+      <div class="step-time">10:00–10:30</div>
+      <div class="step-main">Írott-kő (884 m) – 1. pecsét</div>
+      <div class="step-sub">A Dunántúl teteje őszi lombtengerrel — október egyik legszebb időszak. Rövid pihenő, szél ellen vedd fel a kabátot.</div>
+    </div>
+    <div class="step">
+      <div class="step-dot teal"></div>
+      <div class="step-time">~12:00</div>
+      <div class="step-main">Hét-forrás – 2. pecsét (9 km az Írott-kőtől)</div>
+      <div class="step-sub">Ebéd az esőbeállóban. Október közepén a lombhullás miatt az ösvény csúszós — óvatosan!</div>
+    </div>
+    <div class="step">
+      <div class="step-dot teal"></div>
+      <div class="step-time">~13:30–14:30</div>
+      <div class="step-main">Stájerházak → Vörös-kereszt → Óház-tetői kilátó</div>
+      <div class="step-sub">Panoráma Kőszegre és a Kisalföldre őszi köntösben. Meredek ereszkedés következik.</div>
+    </div>
+    <div class="step">
+      <div class="step-dot teal"></div>
+      <div class="step-time">~16:00–16:30</div>
+      <div class="step-main">Kőszeg – 3. pecsét (Kék Huszár / Tourinform, Fő tér)</div>
+      <div class="step-sub">Jó tempóval bőven napfényben végzel. Ha lassabb a tempó, fejlámpa elő!</div>
+    </div>
+    <div class="step">
+      <div class="step-dot amber"></div>
+      <div class="step-time">Este</div>
+      <div class="step-main">Kőszeg – szállás, vacsora, lábápolás</div>
+      <div class="step-sub">Jurisics-vár, középkori belváros. Készítsd el holnap szendvicseit.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="day-header">
+  <span class="day-badge">2. nap – vasárnap, okt. 18.</span>
+  <span class="day-title">Kőszeg → Tömörd → Kőszeg (autó) → Budapest</span>
+</div>
+
+<div class="info-grid">
+  <div class="info-card"><div class="info-label">Táv</div><div class="info-value">15,8 km</div></div>
+  <div class="info-card"><div class="info-label">Szint</div><div class="info-value">+130 / –180 m</div></div>
+  <div class="info-card"><div class="info-label">Pecsét</div><div class="info-value">1 db (OKT 4)</div></div>
+  <div class="info-card"><div class="info-label">Menetidő</div><div class="info-value">~4–4,5 óra</div></div>
+</div>
+
+<div class="tip-box">Vasárnap könnyebb nap — sík, erdei földút. Tömördre ~12–13 körül érsz, utána taxival vissza Kőszegre az autóért, majd haza Budapestre.</div>
+
+<div class="section-card">
+  <div class="timeline">
+    <div class="step">
+      <div class="step-dot amber"></div>
+      <div class="step-time">08:00</div>
+      <div class="step-main">Reggeli, indulás Kőszegről (Tourinform / Fő tér)</div>
+      <div class="step-sub">Október közepén az erdei ösvény reggel nedves, dérrel borított lehet — körültekintéssel indulj.</div>
+    </div>
+    <div class="step">
+      <div class="step-dot blue"></div>
+      <div class="step-time">~10:00</div>
+      <div class="step-main">Grádics-forrás (kis kitérő)</div>
+      <div class="step-sub">A Grádics-erdő őszi színekben különösen szép ezen a szakaszon.</div>
+    </div>
+    <div class="step">
+      <div class="step-dot teal"></div>
+      <div class="step-time">~12:00–12:30</div>
+      <div class="step-main">Tömörd – 4. pecsét (fedett pihenőhely, templomtól pár lépésre)</div>
+      <div class="step-sub">Ebéd a pihenőnél. Chernel-kastélypark őszi lombszínekkel — megéri egy pillantást.</div>
+    </div>
+    <div class="step">
+      <div class="step-dot coral"></div>
+      <div class="step-time">13:00</div>
+      <div class="step-main">Tömörd → Kőszeg: taxi (előre lefoglalt)</div>
+      <div class="step-sub">~12 km, ~10 perc, ~3.500–5.000 Ft. Gróf József: +36 30 937 7336</div>
+    </div>
+    <div class="step">
+      <div class="step-dot blue"></div>
+      <div class="step-time">~13:30</div>
+      <div class="step-main">Kőszeg: autó átvétel, kávé / utolsó séta a belvárosban</div>
+    </div>
+    <div class="step">
+      <div class="step-dot blue"></div>
+      <div class="step-time">14:00</div>
+      <div class="step-main">Kőszeg → Budapest: 84-es út → M1 autópálya</div>
+      <div class="step-sub">~230 km · ~2,5 óra. Vasárnap délután forgalmas az M1 Budapestnél — számíts +20–30 percre. Beérés: ~16:30–17:00.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div style="font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:0.75rem">Felszerelés – október-specifikus</div>
+<div class="section-card" style="padding-bottom:0.75rem">
+  <div class="gear-grid">
+    <div class="gear-item"><i class="ti ti-shoe" aria-hidden="true"></i>Bejáratott túrabakancs (kötelező — csúszós lomb!)</div>
+    <div class="gear-item"><i class="ti ti-temperature-minus" aria-hidden="true"></i>Meleg réteg + fleece (csúcson 2–8 °C)</div>
+    <div class="gear-item"><i class="ti ti-umbrella" aria-hidden="true"></i>Esőkabát / poncsó (október: változékony)</div>
+    <div class="gear-item"><i class="ti ti-glove" aria-hidden="true"></i>Kesztyű + sapka (Írott-kő csúcsán szeles)</div>
+    <div class="gear-item"><i class="ti ti-flashlight" aria-hidden="true"></i>Fejlámpa kötelező (napnyugta 17:40!)</div>
+    <div class="gear-item"><i class="ti ti-droplet" aria-hidden="true"></i>Víz: 1,5 liter/fő (hűvösben is fontos)</div>
+    <div class="gear-item"><i class="ti ti-bug" aria-hidden="true"></i>Kullancsriasztó (október közepéig aktív)</div>
+    <div class="gear-item"><i class="ti ti-book" aria-hidden="true"></i>OKT igazolófüzet + tintapárna</div>
+    <div class="gear-item"><i class="ti ti-device-mobile" aria-hidden="true"></i>Természetjáró app (offline GPX térkép)</div>
+    <div class="gear-item"><i class="ti ti-bread" aria-hidden="true"></i>Szendvics + forró tea termoszban</div>
+    <div class="gear-item"><i class="ti ti-cash" aria-hidden="true"></i>Készpénz (taxi, kisebb helyek)</div>
+    <div class="gear-item"><i class="ti ti-first-aid-kit" aria-hidden="true"></i>Elsősegély-készlet, hólyagtapasz</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div style="font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:0.75rem">Hasznos kapcsolatok</div>
+<div class="section-card">
+  <div class="contacts">
+    <div class="contact-row"><i class="ti ti-phone" style="font-size:14px;color:var(--color-text-secondary)" aria-hidden="true"></i> <strong>Taxi Kőszeg (Gróf József):</strong> +36 30 937 7336 — pénteken este foglald le mindkét fuvart!</div>
+    <div class="contact-row"><i class="ti ti-building" style="font-size:14px;color:var(--color-text-secondary)" aria-hidden="true"></i> <strong>Tourinform Kőszeg:</strong> Fő tér 7. — bélyegző, OKT füzet</div>
+    <div class="contact-row"><i class="ti ti-parking" style="font-size:14px;color:var(--color-text-secondary)" aria-hidden="true"></i> <strong>Parkoló:</strong> Kőszeg, Liszt Ferenc u. — ingyenes, biztonságos</div>
+    <div class="contact-row"><i class="ti ti-world" style="font-size:14px;color:var(--color-text-secondary)" aria-hidden="true"></i> <strong>Útvonal:</strong> <a href="https://www.kektura.hu" style="color:var(--color-text-info)">kektura.hu</a> · Természetjáró app</div>
+  </div>
+</div>
+
+<div class="warn-box" style="margin-top:1rem">
+  <strong>Két kritikus pont:</strong> (1) Az 1. nap (okt. 17.) <strong>legkésőbb 07:45-re indulj Velemből</strong> — napnyugta 17:40, sötétben az ereszkedés veszélyes. (2) Mindkét taxifuvart <strong>pénteken este foglald előre</strong> egyszerre!
+</div>
+
+</div>
